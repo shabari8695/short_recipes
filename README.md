@@ -14,12 +14,11 @@ If a large portion of the user's input (Approx. 80-90%) matches with the ingredi
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:** Food
+- **Category:** Food & Drinks / Lifestyle
 - **Mobile:** This app would be primarily developed for mobile. Functionality wouldn’t be limited to mobile devices, however mobile version could potentially have more features.
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Story:** A simple app where user can search for recipes based on the ingredients they have.
+- **Market:** Culinary experts and enthusiasts, bachelors, students
+- **Scope:** The scope of this app limited to individual users currently. 
 
 ## Product Spec
 
@@ -39,29 +38,38 @@ If a large portion of the user's input (Approx. 80-90%) matches with the ingredi
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Login/Signup 
+   * A new user can sign up
+   * An existing user can login
+* Feed
+   * User can see all popular recipes 
+* Search
+   * User can search based on ingredients
+   * User can add or remove ingredients
+   * User can star recipes
+* Add
+   * User can add a new recipe
+* User Details
+   * User can see their details
+   * User can logout
+   * User can update their details
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Search
+* Add 
+* User Details
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Login/Signup
+   * Feed
+* Feed
+   * Add
+   * Search
+   * User Details
 
 ## Wireframes
 ![Wireframe](images/wireframe.JPG)
