@@ -27,13 +27,15 @@ If a large portion of the user's input (Approx. 80-90%) matches with the ingredi
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Users can read any of the new recipes posted by the application developers or any user.
+* Create an account for the app to upload their recipes.
+* Option to enter their current set of ingredients.
+* View a set of recipes that are the closest match to their requirement.
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Personalised recommendation based on their previous views.
+* Voice enabled option to search for recipes.
 
 ### 2. Screen Archetypes
 
