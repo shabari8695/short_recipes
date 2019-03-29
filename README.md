@@ -1,4 +1,4 @@
-# Short Recipes
+# Short Yummy Recipes
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -8,12 +8,14 @@
 
 ## Overview
 ### Description
-[Description of your app]
+Deciding on what dish to prepare with the available ingredients? 
+This app tracks ingredients a user inputs into the app and tries to match it with the one's available in the database.
+If a large portion of the user's input (Approx. 80-90%) matches with the ingredients for the dish in the database, a short recipe will be presented to the user to prepare a dish.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
+- **Category:** Food
+- **Mobile:** This app would be primarily developed for mobile. Functionality wouldn’t be limited to mobile devices, however mobile version could potentially have more features.
 - **Story:**
 - **Market:**
 - **Habit:**
