@@ -64,12 +64,19 @@ If a large portion of the user's input (Approx. 80-90%) matches with the ingredi
    * ...
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+![Wireframe](images/wireframe.JPG)
 
 ### [BONUS] Digital Wireframes & Mockups
+![Digital Wireframe](images/splash.png)
+![Digital Wireframe](images/login.png)
+![Digital Wireframe](images/signup.png)
+![Digital Wireframe](images/feed.png)
+![Digital Wireframe](images/search.png)
+![Digital Wireframe](images/add.png)
+![Digital Wireframe](images/useraccount.png)
 
 ### [BONUS] Interactive Prototype
+<img src='https://i.imgur.com/EAG4sSM.gif' title='prototype Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Schema 
 [This section will be completed in Unit 9]
