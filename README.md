@@ -35,6 +35,7 @@ If a large portion of the user's input (Approx. 80-90%) matches with the ingredi
 
 * Personalised recommendation based on their previous views.
 * Voice enabled option to search for recipes.
+* Link the app with Amazon to order the remaining ingredients for the user.
 
 ### 2. Screen Archetypes
 
@@ -87,9 +88,16 @@ If a large portion of the user's input (Approx. 80-90%) matches with the ingredi
 <img src='https://i.imgur.com/EAG4sSM.gif' title='prototype Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+
+* Post
+| Property | Type   | Description                       |
+|----------|--------|-----------------------------------|
+| emailID  | String | email ID of the user              |
+| username | String | unique username for the user      |
+| password | String | password to authenticate the user |
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
