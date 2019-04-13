@@ -91,7 +91,7 @@ If a large portion of the user's input (Approx. 80-90%) matches with the ingredi
 
 ### Models
 
-* Post
+* User
 
 | Property | Type   | Description                       |
 |----------|--------|-----------------------------------|
