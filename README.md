@@ -92,6 +92,7 @@ If a large portion of the user's input (Approx. 80-90%) matches with the ingredi
 ### Models
 
 * Post
+
 | Property | Type   | Description                       |
 |----------|--------|-----------------------------------|
 | emailID  | String | email ID of the user              |
