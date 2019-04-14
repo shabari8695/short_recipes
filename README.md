@@ -91,7 +91,7 @@ If a large portion of the user's input (Approx. 80-90%) matches with the ingredi
 
 ### Models
 
-* User
+**User**
 
 | Property | Type   | Description                       |
 |----------|--------|-----------------------------------|
@@ -99,7 +99,8 @@ If a large portion of the user's input (Approx. 80-90%) matches with the ingredi
 | username | String | unique username for the user      |
 | password | String | password to authenticate the user |
 
-* Recipe
+
+**Recipe**
 
 | Property | Type   | Description                       |
 |----------|--------|-----------------------------------|
