@@ -108,7 +108,7 @@ If a large portion of the user's input (Approx. 80-90%) matches with the ingredi
 | recipeIngredients | Array | ingredients used in the recipe |
 | prepTime | Number | recipe preparation time in hours |
 | cookTime | Number | time to cook in hours |
-|recipe | String | the recipe given by user |
+|recipeSteps | String | steps to prepare the given dish |
 | image | File | password to authenticate the user |
 | createdBy | Pointer to User | recipe creator      |
 |numLikes | Number | number of likes on the recipe |
