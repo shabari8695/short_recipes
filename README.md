@@ -98,6 +98,7 @@ If a large portion of the user's input (Approx. 80-90%) matches with the ingredi
 | emailID  | String | email ID of the user              |
 | username | String | unique username for the user      |
 | password | String | password to authenticate the user |
+| profileImage | File | profile image of the user |
 
 
 **Recipe**
@@ -107,15 +108,114 @@ If a large portion of the user's input (Approx. 80-90%) matches with the ingredi
 | recipeID  | String | unique ID of the recipe (default field)    |    
 | recipeTitle  | String | title/name of the recipe   |  
 | recipeIngredients | Array | ingredients used in the recipe |
-| prepTime | Number | recipe preparation time in hours |
+| prepTime | Number | recipe preparation time in minutes |
 | cookTime | Number | time to cook in hours |
 |recipeSteps | String | steps to prepare the given dish |
 | image | File | password to authenticate the user |
 | createdBy | Pointer to User | recipe creator      |
 |numLikes | Number | number of likes on the recipe |
+|createdAt | DateTime | time at which the recipe was created |
 
 
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+* Login/Sign-up Screen
+    * (Create/POST) Create a new user object
+    ```
+    let user = PFObject(className:"User")
+    user["emailId"] = "john.doe@gmail.com"
+    user["username"] = "johndoe123"
+    user["password"] = "john@123"
+    user.saveInBackground {
+      (success: Bool, error: Error?) in
+      if (success) {
+        // The object has been saved.
+      } else {
+        // There was a problem, check error.description
+      }
+    }
+    ```
+    
+    * (Read/GET) Query user object
+    ```
+    let query = PFQuery(className:"User")
+    query.whereKey("username", equalTo: enteredUsername)
+    query.whereKey("password", equalTo: enteredPass)
+    query.findObjectsInBackground { (user: [PFObject]?, error: Error?) in
+       if let error = error { 
+          print(error.localizedDescription)
+       } else if let user = user {
+          print("Successfully logged in.")
+      // TODO: Do something with user...
+       }
+    }
+    ```
+* Recipe feed Screen
+    * (Read/GET) Query all recipes in chronological order (most-recent first)
+    ```
+    let query = PFQuery(className:"Recipe")
+    query.order(byDescending: "createdAt")
+    query.findObjectsInBackground { (recipes: [PFObject]?, error: Error?) in
+       if let error = error { 
+          print(error.localizedDescription)
+       } else if let recipes = recipes {
+          print("Successfully retrieved \(recipes.count) recipes.")
+      // TODO: Do something with recipes...
+       }
+    }
+    ```
+    * (Create/POST) Create a new like on a recipe
+    * (Delete) Delete existing like
+    
+* Create Recipe Screen
+    * (Create/POST) Create a new recipe object
+    ```
+    let recipe = PFObject(className:"Recipe")
+    recipe["recipeTitle"]="Omelet"
+    recipe["recipeIngredients"]=["eggs","salt","onion","garlic"]
+    recipe["prepTime"]= 10
+    recipe["cookTime"]=10
+    recipe["recipeSteps"]="BEAT eggs, water, salt and pepper in small bowl until blended. HEAT butter in 6 to 8-inch nonstick omelet pan or skillet over medium-high heat until hot. GENTLY PUSH cooked portions from edges toward the center with inverted turner so that uncooked eggs can reach the hot pan surface."
+    recipe["image"]=""
+    recipe["createdBy"]=User
+    recipe["numLikes"]=0
+    recipe["createdAt"]=Date()
+    recipe.saveInBackground {
+      (success: Bool, error: Error?) in
+      if (success) {
+        // The object has been saved.
+      } else {
+        // There was a problem, check error.description
+      }
+    }
+    ```
+    * (Update/PUT) Update existing recipe
+    ```
+    let query = PFQuery(className:"Recipe")
+    query.getObjectInBackground(withId: "xWMyZEGZ") { (recipe: PFObject?, error: Error?) in
+        if let error = error {
+            print(error.localizedDescription)
+        } else if let recipe = recipe {
+            recipe["recipeIngredients"]=["eggs","salt","onion","garlic","green chili"]
+        }
+    }
+    ```
+* Search Recipe Screen
+    * (Read/GET) Query all recipes by ingredients
+    ```
+    let query = PFQuery(className:"Recipe")
+    query.whereKey("recipeIngredients", equalTo: ingredients)
+    query.findObjectsInBackground { (recipes: [PFObject]?, error: Error?) in
+       if let error = error { 
+          print(error.localizedDescription)
+       } else if let recipes = recipes {
+          print("Successfully retrieved \(recipes.count) recipes.")
+      // TODO: Do something with recipes...
+       }
+    }
+    ```
+    * (Create/POST) Create a new like on a recipe
+    * (Delete) Delete existing like
+* User Account Screen
+    * (Read/GET) Query logged in user object
+    * (Update/PUT) Update user profile details
+    * (Update/PUT) Logout user (update session)
