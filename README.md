@@ -99,6 +99,21 @@ If a large portion of the user's input (Approx. 80-90%) matches with the ingredi
 | username | String | unique username for the user      |
 | password | String | password to authenticate the user |
 
+* Recipe
+
+| Property | Type   | Description                       |
+|----------|--------|-----------------------------------|
+| recipeID  | String | unique ID of the recipe (default field)    |    
+| recipeTitle  | String | title/name of the recipe   |  
+| recipeIngredients | Array | ingredients used in the recipe |
+| prepTime | Number | recipe preparation time in hours |
+| cookTime | Number | time to cook in hours |
+|recipe | String | the recipe given by user |
+| image | File | password to authenticate the user |
+| createdBy | Pointer to User | recipe creator      |
+|numLikes | Number | number of likes on the recipe |
+
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
